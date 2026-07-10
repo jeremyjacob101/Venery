@@ -1,0 +1,369 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		23DE42DDF42775F9685A7AD5 /* AnimalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914907667885EF69C1D186FF /* AnimalEntry.swift */; };
+		3251321BC829E761C188E4EF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D074AFEB7C6BADC0CCCB2831 /* ContentView.swift */; };
+		37380972E5F3BB92645743B1 /* list-of-animal-venery.json in Resources */ = {isa = PBXBuildFile; fileRef = 86A6563387C98ABACD419CEC /* list-of-animal-venery.json */; };
+		3ABBC58A879E6B4D433CA6E8 /* AnimalIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD3A5C27BEF944B33061CAA /* AnimalIcon.swift */; };
+		40A668987BB6A39CCF40BB0A /* VeneryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B712AFED0E4921280723A636 /* VeneryApp.swift */; };
+		795FD8F95DA937F30F045159 /* animal-icon-sheet-source.png in Resources */ = {isa = PBXBuildFile; fileRef = 640CEC7248131CCA027DD0E1 /* animal-icon-sheet-source.png */; };
+		BF0D95A696E210D29BA23198 /* animal-icon-sheet.png in Resources */ = {isa = PBXBuildFile; fileRef = CA23F4BE8D927BD0EC534B50 /* animal-icon-sheet.png */; };
+		C2DFBB278D0482E10D99A9BB /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0056A3A853FC2DCE90AA02B1 /* AboutView.swift */; };
+		E3B71C54A2CB64F9E8DA50CA /* BrowseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874D2FE60237E1780E1F3C8E /* BrowseView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0056A3A853FC2DCE90AA02B1 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		2BD3A5C27BEF944B33061CAA /* AnimalIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalIcon.swift; sourceTree = "<group>"; };
+		640CEC7248131CCA027DD0E1 /* animal-icon-sheet-source.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "animal-icon-sheet-source.png"; sourceTree = "<group>"; };
+		86A6563387C98ABACD419CEC /* list-of-animal-venery.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "list-of-animal-venery.json"; sourceTree = "<group>"; };
+		874D2FE60237E1780E1F3C8E /* BrowseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseView.swift; sourceTree = "<group>"; };
+		914907667885EF69C1D186FF /* AnimalEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalEntry.swift; sourceTree = "<group>"; };
+		B712AFED0E4921280723A636 /* VeneryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeneryApp.swift; sourceTree = "<group>"; };
+		CA23F4BE8D927BD0EC534B50 /* animal-icon-sheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "animal-icon-sheet.png"; sourceTree = "<group>"; };
+		D074AFEB7C6BADC0CCCB2831 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D9069497DEC760ED3189BEC8 /* Venery.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Venery.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0D3E00E6FD3B556FB501C9A8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0056A3A853FC2DCE90AA02B1 /* AboutView.swift */,
+				2BD3A5C27BEF944B33061CAA /* AnimalIcon.swift */,
+				874D2FE60237E1780E1F3C8E /* BrowseView.swift */,
+				D074AFEB7C6BADC0CCCB2831 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1A1E346958AD91CC6A6F0639 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				640CEC7248131CCA027DD0E1 /* animal-icon-sheet-source.png */,
+				CA23F4BE8D927BD0EC534B50 /* animal-icon-sheet.png */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
+		3C5DE41325202B0481FADDF3 /* VeneryApp */ = {
+			isa = PBXGroup;
+			children = (
+				B712AFED0E4921280723A636 /* VeneryApp.swift */,
+				538F9DCFD15F17056EE5AA90 /* Models */,
+				E2B23DE142CEC286E18B05F2 /* Resources */,
+				0D3E00E6FD3B556FB501C9A8 /* Views */,
+			);
+			path = VeneryApp;
+			sourceTree = "<group>";
+		};
+		538F9DCFD15F17056EE5AA90 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				914907667885EF69C1D186FF /* AnimalEntry.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C6218BACA558BD7BA2A2A66D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D9069497DEC760ED3189BEC8 /* Venery.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E2B23DE142CEC286E18B05F2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				86A6563387C98ABACD419CEC /* list-of-animal-venery.json */,
+				1A1E346958AD91CC6A6F0639 /* Icons */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EEEC515E2EB2B959FC4FF94E = {
+			isa = PBXGroup;
+			children = (
+				3C5DE41325202B0481FADDF3 /* VeneryApp */,
+				C6218BACA558BD7BA2A2A66D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4D3DC42D54D00AAD6F76DBAF /* Venery */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EF44190CC9F50105E9CA9FF /* Build configuration list for PBXNativeTarget "Venery" */;
+			buildPhases = (
+				5643ECD081F082356DC15C1E /* Sources */,
+				6EC7CB1664C8417700F7F14E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Venery;
+			packageProductDependencies = (
+			);
+			productName = Venery;
+			productReference = D9069497DEC760ED3189BEC8 /* Venery.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		732546CCD2C6A41CD08680CA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = B95960A25D3C1F244D730BE1 /* Build configuration list for PBXProject "Venery" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = EEEC515E2EB2B959FC4FF94E;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = C6218BACA558BD7BA2A2A66D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4D3DC42D54D00AAD6F76DBAF /* Venery */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6EC7CB1664C8417700F7F14E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				795FD8F95DA937F30F045159 /* animal-icon-sheet-source.png in Resources */,
+				BF0D95A696E210D29BA23198 /* animal-icon-sheet.png in Resources */,
+				37380972E5F3BB92645743B1 /* list-of-animal-venery.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5643ECD081F082356DC15C1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2DFBB278D0482E10D99A9BB /* AboutView.swift in Sources */,
+				23DE42DDF42775F9685A7AD5 /* AnimalEntry.swift in Sources */,
+				3ABBC58A879E6B4D433CA6E8 /* AnimalIcon.swift in Sources */,
+				E3B71C54A2CB64F9E8DA50CA /* BrowseView.swift in Sources */,
+				3251321BC829E761C188E4EF /* ContentView.swift in Sources */,
+				40A668987BB6A39CCF40BB0A /* VeneryApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		41FC5A2A984E3589251D68FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeremyjacob.Venery;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6E510106D2AC534640EC5139 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Venery;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		8AA1A6699AE377A069FBF70C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Venery;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A32368DE64014B43297C2A5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeremyjacob.Venery;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4EF44190CC9F50105E9CA9FF /* Build configuration list for PBXNativeTarget "Venery" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41FC5A2A984E3589251D68FB /* Debug */,
+				A32368DE64014B43297C2A5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B95960A25D3C1F244D730BE1 /* Build configuration list for PBXProject "Venery" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AA1A6699AE377A069FBF70C /* Debug */,
+				6E510106D2AC534640EC5139 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 732546CCD2C6A41CD08680CA /* Project object */;
+}
