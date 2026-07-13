@@ -20,8 +20,6 @@ targets:
         embed: true
     sources:
       - path: VeneryApp
-        excludes:
-          - Resources/Icons/animal-icon-sheet-source.png
     resources:
       - path: VeneryApp/Resources/list-of-animal-venery.json
     settings:

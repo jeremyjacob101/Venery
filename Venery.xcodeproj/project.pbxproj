@@ -19,9 +19,7 @@
 		6C81F7BE1901B465BE586B21 /* VeneryWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0939DB3CC82571286A770B62 /* VeneryWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		71A1D0B0DA21EE1A71D59DCD /* AnimalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914907667885EF69C1D186FF /* AnimalEntry.swift */; };
 		734C38908AB4EF872D43CD2B /* VeneryWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B596ADAFE7C5063480E471 /* VeneryWidget.swift */; };
-		795FD8F95DA937F30F045159 /* animal-icon-sheet-source.png in Resources */ = {isa = PBXBuildFile; fileRef = 640CEC7248131CCA027DD0E1 /* animal-icon-sheet-source.png */; };
 		98FCBE0DDC0CEB83158BD4B9 /* AnimalIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD3A5C27BEF944B33061CAA /* AnimalIcon.swift */; };
-		BF0D95A696E210D29BA23198 /* animal-icon-sheet.png in Resources */ = {isa = PBXBuildFile; fileRef = CA23F4BE8D927BD0EC534B50 /* animal-icon-sheet.png */; };
 		BF32517D4D53E45CB2D3B44E /* FavoritesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E5D72C8632339CCF8B9FF3 /* FavoritesStore.swift */; };
 		C0FDADC0886BD83EEBB2460F /* list-of-animal-venery.json in Resources */ = {isa = PBXBuildFile; fileRef = 3B645B3D37CB99DB8BC88020 /* list-of-animal-venery.json */; };
 		C2DFBB278D0482E10D99A9BB /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0056A3A853FC2DCE90AA02B1 /* AboutView.swift */; };
@@ -54,11 +52,10 @@
 
 /* Begin PBXFileReference section */
 		0056A3A853FC2DCE90AA02B1 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
-		0939DB3CC82571286A770B62 /* VeneryWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = VeneryWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		0939DB3CC82571286A770B62 /* VeneryWidget.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = VeneryWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BD3A5C27BEF944B33061CAA /* AnimalIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalIcon.swift; sourceTree = "<group>"; };
 		3B645B3D37CB99DB8BC88020 /* list-of-animal-venery.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "list-of-animal-venery.json"; sourceTree = "<group>"; };
 		3E32DAD04CFDAE567C545AF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		640CEC7248131CCA027DD0E1 /* animal-icon-sheet-source.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "animal-icon-sheet-source.png"; sourceTree = "<group>"; };
 		86A6563387C98ABACD419CEC /* list-of-animal-venery.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "list-of-animal-venery.json"; sourceTree = "<group>"; };
 		874D2FE60237E1780E1F3C8E /* BrowseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseView.swift; sourceTree = "<group>"; };
 		914907667885EF69C1D186FF /* AnimalEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalEntry.swift; sourceTree = "<group>"; };
@@ -67,9 +64,8 @@
 		AE84A172E151838D94B521D1 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		B2E5D72C8632339CCF8B9FF3 /* FavoritesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesStore.swift; sourceTree = "<group>"; };
 		B712AFED0E4921280723A636 /* VeneryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeneryApp.swift; sourceTree = "<group>"; };
-		CA23F4BE8D927BD0EC534B50 /* animal-icon-sheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "animal-icon-sheet.png"; sourceTree = "<group>"; };
 		D074AFEB7C6BADC0CCCB2831 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		D9069497DEC760ED3189BEC8 /* Venery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Venery.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9069497DEC760ED3189BEC8 /* Venery.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Venery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6B596ADAFE7C5063480E471 /* VeneryWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeneryWidget.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,15 +81,6 @@
 				9B417025C8649D40BDD3D902 /* FavoritesView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		1A1E346958AD91CC6A6F0639 /* Icons */ = {
-			isa = PBXGroup;
-			children = (
-				640CEC7248131CCA027DD0E1 /* animal-icon-sheet-source.png */,
-				CA23F4BE8D927BD0EC534B50 /* animal-icon-sheet.png */,
-			);
-			path = Icons;
 			sourceTree = "<group>";
 		};
 		30394C7DD79845834D326FFB /* VeneryWidget */ = {
@@ -148,7 +135,6 @@
 			children = (
 				92028B4C3DF72C0E02E2F937 /* Assets.xcassets */,
 				86A6563387C98ABACD419CEC /* list-of-animal-venery.json */,
-				1A1E346958AD91CC6A6F0639 /* Icons */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -210,7 +196,9 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 2660;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+				};
 			};
 			buildConfigurationList = B95960A25D3C1F244D730BE1 /* Build configuration list for PBXProject "Venery" */;
 			developmentRegion = en;
@@ -246,8 +234,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				593DF89A9D6C1AD9B32CB508 /* Assets.xcassets in Resources */,
-				795FD8F95DA937F30F045159 /* animal-icon-sheet-source.png in Resources */,
-				BF0D95A696E210D29BA23198 /* animal-icon-sheet.png in Resources */,
 				37380972E5F3BB92645743B1 /* list-of-animal-venery.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,7 +284,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = UZ7YLA6V9D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -354,7 +339,6 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -370,7 +354,6 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
@@ -380,7 +363,6 @@
 		81568DF2C37B7764ED058B01 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = UZ7YLA6V9D;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = VeneryWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -432,7 +414,6 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -455,7 +436,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -467,7 +447,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = UZ7YLA6V9D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -488,7 +467,6 @@
 		E0BFD49A8BB6695DF7B01FF5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = UZ7YLA6V9D;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = VeneryWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
