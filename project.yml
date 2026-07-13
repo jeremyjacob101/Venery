@@ -15,6 +15,9 @@ targets:
   Venery:
     type: application
     platform: iOS
+    dependencies:
+      - target: VeneryWidget
+        embed: true
     sources:
       - path: VeneryApp
     resources:
@@ -27,4 +30,20 @@ targets:
         INFOPLIST_KEY_UIApplicationSceneManifest_Generation: true
         INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: true
         INFOPLIST_KEY_UILaunchScreen_Generation: true
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        TARGETED_DEVICE_FAMILY: "1,2"
+  VeneryWidget:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: VeneryWidget
+      - path: VeneryApp/Models
+      - path: VeneryApp/Views/AnimalIcon.swift
+    resources:
+      - path: VeneryWidget/Resources/list-of-animal-venery.json
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.jeremyjacob.Venery.widget
+        GENERATE_INFOPLIST_FILE: NO
+        INFOPLIST_FILE: VeneryWidget/Info.plist
         TARGETED_DEVICE_FAMILY: "1,2"

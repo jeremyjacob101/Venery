@@ -2,60 +2,83 @@ import SwiftUI
 
 struct ContentView: View {
     private let animals = AnimalStore.animals
-    private let today = Date()
 
+    @State private var favorites = FavoritesStore()
     @State private var showingBrowse = false
     @State private var showingAbout = false
 
-    private var dailyAnimal: AnimalEntry? {
-        DailyPicker.item(for: today, from: animals)
-    }
-
     var body: some View {
         NavigationStack {
-            ScrollView {
-                VStack(alignment: .leading, spacing: 24) {
-                    if let dailyAnimal {
-                        DailyCard(entry: dailyAnimal, date: today)
-                    } else {
-                        ContentUnavailableView("No animals yet", systemImage: "pawprint", description: Text("Add the bundled dataset to begin."))
-                    }
+            TimelineView(.periodic(from: .now, by: 60)) { context in
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 24) {
+                        Text("Venery")
+                            .font(.system(size: 34, weight: .bold, design: .rounded))
+                            .foregroundStyle(Color.appInk)
 
-                    HStack(spacing: 12) {
-                        Label("One small word a day", systemImage: "sparkles")
-                            .font(.subheadline.weight(.medium))
-                            .foregroundStyle(.secondary)
-
-                        Spacer()
-
-                        Text("\(animals.count) animals")
-                            .font(.caption.weight(.semibold))
-                            .foregroundStyle(.secondary)
-                    }
-
-                    Button {
-                        showingBrowse = true
-                    } label: {
-                        HStack {
-                            Label("See every animal and noun", systemImage: "square.grid.2x2")
-                                .font(.headline)
-                            Spacer()
-                            Image(systemName: "chevron.right")
-                                .font(.caption.weight(.bold))
+                        if let dailyAnimal = DailyPicker.item(for: context.date, from: animals) {
+                            DailyCard(entry: dailyAnimal, date: context.date, favorites: favorites)
+                        } else {
+                            ContentUnavailableView("No animals yet", systemImage: "pawprint", description: Text("Add the bundled dataset to begin."))
                         }
-                        .foregroundStyle(.primary)
-                        .padding(18)
-                        .background(.white.opacity(0.76), in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+
+                        HStack(spacing: 12) {
+                            Label("One small word a day", systemImage: "sparkles")
+                                .font(.subheadline.weight(.medium))
+                                .foregroundStyle(Color.appMuted)
+
+                            Spacer()
+
+                            Text("\(animals.count) animals")
+                                .font(.caption.weight(.semibold))
+                                .foregroundStyle(Color.appMuted)
+                        }
+
+                        NavigationLink {
+                            FavoritesView(animals: animals, favorites: favorites)
+                        } label: {
+                            HStack {
+                                Label("Favorites", systemImage: "heart.fill")
+                                    .font(.headline)
+                                Spacer()
+                                Text("\(favorites.animalIDs.count)")
+                                    .font(.subheadline.weight(.bold))
+                                Image(systemName: "chevron.right")
+                                    .font(.caption.weight(.bold))
+                            }
+                            .foregroundStyle(Color.appInk)
+                            .padding(18)
+                            .background(Color.appSurface, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+                        }
+                        .buttonStyle(.plain)
+                        .accessibilityIdentifier("favorites")
+
+                        Button {
+                            showingBrowse = true
+                        } label: {
+                            HStack {
+                                Label("See every animal and noun", systemImage: "square.grid.2x2")
+                                    .font(.headline)
+                                Spacer()
+                                Image(systemName: "chevron.right")
+                                    .font(.caption.weight(.bold))
+                            }
+                            .foregroundStyle(Color.appInk)
+                            .padding(18)
+                            .background(Color.appSurface, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+                        }
+                        .buttonStyle(.plain)
+                        .accessibilityIdentifier("browse-all")
                     }
-                    .buttonStyle(.plain)
-                    .accessibilityIdentifier("browse-all")
+                    .padding(.horizontal, 20)
+                    .padding(.top, 12)
+                    .padding(.bottom, 28)
                 }
-                .padding(.horizontal, 20)
-                .padding(.top, 12)
-                .padding(.bottom, 28)
+                .background(Color.appBackground.ignoresSafeArea())
             }
-            .background(Color.appBackground.ignoresSafeArea())
-            .navigationTitle("Venery")
+            .navigationTitle("")
+            .toolbarBackground(Color.appBackground, for: .navigationBar)
+            .toolbarBackground(.visible, for: .navigationBar)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button {
@@ -76,7 +99,7 @@ struct ContentView: View {
                 }
             }
             .navigationDestination(isPresented: $showingBrowse) {
-                BrowseView(animals: animals)
+                BrowseView(animals: animals, favorites: favorites)
             }
             .sheet(isPresented: $showingAbout) {
                 AboutView()
@@ -88,6 +111,7 @@ struct ContentView: View {
 private struct DailyCard: View {
     let entry: AnimalEntry
     let date: Date
+    let favorites: FavoritesStore
 
     private var accent: Color {
         let value = entry.animal.utf8.reduce(0) { $0 + Int($1) }
@@ -104,9 +128,7 @@ private struct DailyCard: View {
 
                 Spacer()
 
-                Label("1 MIN", systemImage: "clock")
-                    .font(.caption.weight(.bold))
-                    .foregroundStyle(.white.opacity(0.78))
+                FavoriteButton(entry: entry, favorites: favorites, prominent: true)
             }
 
             Spacer(minLength: 42)
@@ -130,7 +152,12 @@ private struct DailyCard: View {
                 AnimalIconBadge(entry: entry, size: 86)
             }
 
-            Text("Here are all the names in the list for this animal:")
+            Text(entry.displayCollectivePhrase)
+                .font(.title3.weight(.semibold))
+                .foregroundStyle(.white)
+                .fixedSize(horizontal: false, vertical: true)
+
+            Text("More names from the source list:")
                 .font(.body.weight(.medium))
                 .foregroundStyle(.white.opacity(0.9))
                 .fixedSize(horizontal: false, vertical: true)
@@ -167,13 +194,24 @@ private struct DailyCard: View {
             in: RoundedRectangle(cornerRadius: 30, style: .continuous)
         )
         .shadow(color: accent.opacity(0.22), radius: 22, y: 12)
-        .accessibilityElement(children: .combine)
+        .accessibilityElement(children: .contain)
         .accessibilityLabel("Today's animal: \(entry.animal). Collective nouns: \(entry.nouns.joined(separator: ", "))")
     }
 }
 
 extension Color {
-    static let appBackground = Color(red: 0.95, green: 0.94, blue: 0.91)
+    static let appBackground = Color(uiColor: UIColor { traits in
+        traits.userInterfaceStyle == .dark
+            ? UIColor(red: 0.08, green: 0.09, blue: 0.10, alpha: 1)
+            : UIColor(red: 0.95, green: 0.94, blue: 0.91, alpha: 1)
+    })
+    static let appSurface = Color(uiColor: UIColor { traits in
+        traits.userInterfaceStyle == .dark
+            ? UIColor(red: 0.14, green: 0.15, blue: 0.17, alpha: 1)
+            : UIColor(red: 1, green: 1, blue: 1, alpha: 0.84)
+    })
+    static let appInk = Color(uiColor: .label)
+    static let appMuted = Color(uiColor: .secondaryLabel)
     static let coral = Color(red: 0.78, green: 0.32, blue: 0.27)
     static let teal = Color(red: 0.10, green: 0.43, blue: 0.43)
     static let gold = Color(red: 0.72, green: 0.48, blue: 0.12)

@@ -2,6 +2,7 @@ import SwiftUI
 
 struct BrowseView: View {
     let animals: [AnimalEntry]
+    let favorites: FavoritesStore
     @State private var searchText = ""
 
     private var filteredAnimals: [AnimalEntry] {
@@ -14,34 +15,51 @@ struct BrowseView: View {
 
     var body: some View {
         List(filteredAnimals) { entry in
-            NavigationLink(value: entry) {
-                HStack(alignment: .top, spacing: 12) {
-                    AnimalIconBadge(entry: entry, size: 54)
-
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text(entry.displayAnimal)
-                            .font(.headline)
-                        Text(entry.nouns.map { $0.replacingOccurrences(of: "\n", with: " ") }.joined(separator: " · "))
-                            .font(.subheadline)
-                            .foregroundStyle(.secondary)
-                            .fixedSize(horizontal: false, vertical: true)
-                    }
+            HStack(spacing: 12) {
+                NavigationLink {
+                    AnimalDetailView(entry: entry, favorites: favorites)
+                } label: {
+                    AnimalRow(entry: entry)
                 }
-                .padding(.vertical, 5)
+
+                FavoriteButton(entry: entry, favorites: favorites)
             }
+            .padding(.vertical, 5)
+            .listRowBackground(Color.appBackground)
         }
         .scrollContentBackground(.hidden)
         .background(Color.appBackground)
+        .listStyle(.plain)
+        .listRowBackground(Color.appBackground)
         .navigationTitle("All animals")
-        .searchable(text: $searchText, prompt: "Find an animal")
-        .navigationDestination(for: AnimalEntry.self) { entry in
-            AnimalDetailView(entry: entry)
+        .toolbarBackground(Color.appBackground, for: .navigationBar)
+        .toolbarBackground(.visible, for: .navigationBar)
+        .searchable(text: $searchText, prompt: "Find an animal or collective noun")
+    }
+}
+
+struct AnimalRow: View {
+    let entry: AnimalEntry
+
+    var body: some View {
+        HStack(alignment: .top, spacing: 12) {
+            AnimalIconBadge(entry: entry, size: 54)
+
+            VStack(alignment: .leading, spacing: 4) {
+                Text(entry.displayAnimal)
+                    .font(.headline)
+                Text(entry.nouns.map { $0.replacingOccurrences(of: "\n", with: " ") }.joined(separator: " · "))
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
         }
     }
 }
 
-private struct AnimalDetailView: View {
+struct AnimalDetailView: View {
     let entry: AnimalEntry
+    let favorites: FavoritesStore
 
     var body: some View {
         ScrollView {
@@ -53,12 +71,12 @@ private struct AnimalDetailView: View {
                         Text("COLLECTIVE NOUNS FOR")
                             .font(.caption.weight(.bold))
                             .tracking(1.2)
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(Color.appMuted)
                         Text(entry.displayAnimal)
                             .font(.system(size: 40, weight: .bold, design: .rounded))
                             .minimumScaleFactor(0.7)
                             .lineLimit(3)
-                        Text("\(entry.nouns.count) names in the source list")
+                        Text("\(entry.nouns.count) name\(entry.nouns.count == 1 ? "" : "s") in the source list")
                             .font(.subheadline.weight(.medium))
                             .foregroundStyle(.secondary)
                     }
@@ -74,13 +92,13 @@ private struct AnimalDetailView: View {
                             Spacer()
                         }
                         .padding(16)
-                        .background(.white.opacity(0.72), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                            .background(Color.appSurface, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
                     }
                 }
 
-                Text("Try this one in a sentence: “a \(entry.primaryNoun) of \(entry.animal).”")
+                Text("Try this one in a sentence: “\(entry.collectivePhrase).”")
                     .font(.body.weight(.medium))
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(Color.appMuted)
                     .padding(.top, 4)
             }
             .padding(20)
@@ -88,5 +106,12 @@ private struct AnimalDetailView: View {
         .background(Color.appBackground.ignoresSafeArea())
         .navigationTitle(entry.displayAnimal)
         .navigationBarTitleDisplayMode(.inline)
+        .toolbarBackground(Color.appBackground, for: .navigationBar)
+        .toolbarBackground(.visible, for: .navigationBar)
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                FavoriteButton(entry: entry, favorites: favorites)
+            }
+        }
     }
 }
