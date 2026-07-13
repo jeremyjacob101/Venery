@@ -30,6 +30,8 @@ targets:
         INFOPLIST_KEY_UIApplicationSceneManifest_Generation: true
         INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: true
         INFOPLIST_KEY_UILaunchScreen_Generation: true
+        INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight
+        INFOPLIST_KEY_UISupportedInterfaceOrientations~ipad: UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         TARGETED_DEVICE_FAMILY: "1,2"
   VeneryWidget:
@@ -47,3 +49,13 @@ targets:
         GENERATE_INFOPLIST_FILE: NO
         INFOPLIST_FILE: VeneryWidget/Info.plist
         TARGETED_DEVICE_FAMILY: "1,2"
+
+schemes:
+  Venery:
+    build:
+      targets:
+        Venery: all
+    run:
+      config: Debug
+    archive:
+      config: Release
