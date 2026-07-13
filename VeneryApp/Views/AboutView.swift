@@ -19,18 +19,18 @@ struct AboutView: View {
                     VStack(alignment: .leading, spacing: 10) {
                         Text("Data & attribution")
                             .font(.headline)
-                        Text("The bundled list is adapted from cjwinchester’s public repository, which identifies Wikipedia’s “List of English terms of venery, by animal” as its source.")
+                        Text("The bundled list is adapted from Wikipedia’s “List of English terms of venery, by animal,” via cjwinchester’s public JSON dataset. The material is available under CC BY-SA 4.0 and has been modified for Venery.")
                             .foregroundStyle(Color.appMuted)
                         Link("Open the GitHub dataset", destination: URL(string: "https://github.com/cjwinchester/collective-nouns-for-animals")!)
                         Link("Open the Wikipedia source", destination: URL(string: "https://en.wikipedia.org/wiki/List_of_English_terms_of_venery,_by_animal")!)
+                        Link("Read the CC BY-SA 4.0 license", destination: URL(string: "https://creativecommons.org/licenses/by-sa/4.0/")!)
                     }
 
                     VStack(alignment: .leading, spacing: 10) {
-                        Text("License note")
+                        Text("Modifications")
                             .font(.headline)
-                        Text("The GitHub repository does not include an explicit LICENSE file. Wikipedia text is generally available under CC BY-SA; confirm the current source terms and provide attribution/share-alike compliance before distributing this app commercially.")
+                        Text("Venery formats, selects, and presents this adapted material as a daily vocabulary experience. The bundled source and attribution notice are included with the app.")
                             .foregroundStyle(Color.appMuted)
-                        Link("Read Wikipedia’s terms of use", destination: URL(string: "https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use")!)
                     }
                 }
                 .padding(24)
