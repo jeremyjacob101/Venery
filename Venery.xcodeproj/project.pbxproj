@@ -69,7 +69,7 @@
 		B712AFED0E4921280723A636 /* VeneryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeneryApp.swift; sourceTree = "<group>"; };
 		CA23F4BE8D927BD0EC534B50 /* animal-icon-sheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "animal-icon-sheet.png"; sourceTree = "<group>"; };
 		D074AFEB7C6BADC0CCCB2831 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		D9069497DEC760ED3189BEC8 /* Venery.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Venery.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9069497DEC760ED3189BEC8 /* Venery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Venery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6B596ADAFE7C5063480E471 /* VeneryWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeneryWidget.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -211,8 +211,6 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1430;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = B95960A25D3C1F244D730BE1 /* Build configuration list for PBXProject "Venery" */;
 			developmentRegion = en;
@@ -300,6 +298,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = UZ7YLA6V9D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -461,6 +460,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = UZ7YLA6V9D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
