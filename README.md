@@ -148,6 +148,12 @@ The bundled animal list is adapted from [cjwinchester/collective-nouns-for-anima
 
 The adapted material is available under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Venery formats, selects, and presents that material as a daily vocabulary experience; it includes attribution, a license link, and a notice of modification in the app’s About screen. See [ATTRIBUTIONS.md](ATTRIBUTIONS.md) for the full notice.
 
+## License
+
+Venery’s source code is available under the [MIT License](LICENSE.md).
+
+The MIT License applies to the app’s source code, not to the bundled adapted animal-noun data. That material is separately attributed above and remains available under CC BY-SA 4.0.
+
 ## Contributing
 
 This is a small, intentional app. If you change the vocabulary data, daily-selection rules, widget layout, or attribution text, please check all of the following before opening a pull request:

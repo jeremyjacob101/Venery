@@ -1,0 +1,10 @@
+.DS_Store
+buildServer.json
+
+# Xcode user-local state
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+
+# Local design/source artifacts not needed in app bundles
+VeneryApp/Resources/Icons/animal-icon-sheet-source.png
